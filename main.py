@@ -17,6 +17,18 @@ class Character():
     self.Name = self.Description = ""
     self.ID = self.CurrentLocation = 0
 
+class Player():
+  def __init__(self):
+    self.hp = 10
+  def eatFood(self,food):
+    self.hp = self.hp + food.healamount()
+
+class Food:
+  def __init__(self,name,healamount):
+    self.name = name
+    self.healamount = healamount 
+    
+
 class Item():
   def __init__(self):
     self.ID = self.Location = 0
